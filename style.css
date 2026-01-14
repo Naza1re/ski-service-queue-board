@@ -5,8 +5,10 @@
     color: #000;
     font-size: large;
     border-radius: 100pt;
-     border: 4px solid #648ab3;
+    border: 4px solid #648ab3;
+    margin-top: 200pt;
 }
+
 
 body {
     margin: 0;         
@@ -23,6 +25,7 @@ body {
 .queue div {
     font-size: 32px; 
     font-weight: bold;
+
 }
 
 

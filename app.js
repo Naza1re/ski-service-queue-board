@@ -16,3 +16,11 @@ stompClient.connect({}, function(frame) {
         nextEl.textContent = data.next;
     });
 });
+
+fetch("http://localhost:8080/api/v0.1/queue")
+    .then(response => response.json())
+    .then(data => {
+        currentEl.textContent = data.current;
+        nextEl.textContent = data.next;
+    })
+    .catch(err => console.error("Ошибка при загрузке очереди:", err));
