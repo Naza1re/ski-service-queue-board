@@ -23,4 +23,4 @@ fetch("http://localhost:8080/api/v0.1/queue")
         currentEl.textContent = data.current;
         nextEl.textContent = data.next;
     })
-    .catch(err => console.error("Ошибка при загрузке очереди:", err));
+    .catch(err => console.error("Error during fetching queue:", err));
