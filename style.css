@@ -1,0 +1,28 @@
+.queue {
+    display: flex;
+    justify-content: center;
+    gap: 20pt;
+    color: #000;
+    font-size: large;
+    border-radius: 100pt;
+     border: 4px solid #648ab3;
+}
+
+body {
+    margin: 0;         
+    padding: 0;
+    width: 100%;         
+    min-height: 100vh;   
+    background-image: url('77c5d9a813ccb7317041fcfa67b8f13b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center; 
+    background-position: center;
+}
+
+.queue div {
+    font-size: 32px; 
+    font-weight: bold;
+}
+
+
