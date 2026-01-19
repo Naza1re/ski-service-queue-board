@@ -20,11 +20,24 @@ body {
     background-size: cover;
     align-items: center; 
     background-position: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .queue div {
     font-size: 32px; 
     font-weight: bold;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.header h1 {
+    color: rgb(19, 19, 196)
 
 }
 
