@@ -1,44 +1,74 @@
-.queue {
-    display: flex;
-    justify-content: center;
-    gap: 20pt;
-    color: #000;
-    font-size: large;
-    border-radius: 100pt;
-    border: 4px solid #648ab3;
-    margin-top: 200pt;
+/* Обёртка для центрирования */
+.tabs-wrapper {
+    display: flex;            /* flex-контейнер */
+    justify-content: center;  /* центрируем горизонтально */
+    margin-top: 20px;
 }
 
+/* Сам блок табов с рамкой */
+.tabs {
+    display: flex;            /* чтобы табы шли по горизонтали */
+    gap: 10px;                /* расстояние между табами */
+    font-size: larger;
+    border-radius: 5pt;
+    border: 2px solid #333;   /* рамка */
+    padding: 10px 20px;       /* внутренние отступы */
+    background-color: #f9f9f9;
+}
+
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5pt;
+    background: #ddd;
+    transition: background 0.2s;
+}
+
+.tab.active {
+    background: #aaa;
+}
+
+/* Блоки очереди */
+.queues {
+    display: flex;
+    justify-content: center;
+    gap: 300px;       /* расстояние между очередями */
+    margin-top: 40px;
+
+
+}
+
+.queue-block {
+    display: none;
+    text-align: center;
+}
+
+.queue-block.active {
+    display: block;
+}
+
+h2 {
+    font-size: 50pt;
+}
+
+.queue-block.active > p {
+    font-size: 40pt;
+}
 
 body {
-    margin: 0;         
-    padding: 0;
-    width: 100%;         
-    min-height: 100vh;   
-    background-image: url('77c5d9a813ccb7317041fcfa67b8f13b.jpg');
+    background-image: url("77c5d9a813ccb7317041fcfa67b8f13b.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    align-items: center; 
-    background-position: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.queue div {
-    font-size: 32px; 
-    font-weight: bold;
 
-}
-
-.header {
+.registration {
     display: flex;
     justify-content: center;
-    font-size: 30pt;
-    font-weight: bold;
+    gap: 250px;
 }
 
-.header h1 {
-    color: rgb(19, 19, 196)
-
+.queues {
+    gap : 300px;
 }
-
-

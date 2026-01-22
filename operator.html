@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Очередь</title>
+    <title>Управление</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
@@ -13,32 +13,56 @@
             <div class="tab" data-target="rental">Прокат</div>
             <div class="tab" data-target="payment">Оплата</div>
         </div>
-        <div>
-            <a href="operator.html" class="manage">Управление</a>
+         <div>
+            <a href="index.html" class="manage">Очередь</a>
         </div>
         </div>
     </header>
 
-    <div id="queues" class="queues">
+    <main>
+
+        <div id="queues" class="queues">
+            <div class="registration">
+            <form action="">
+                <h4>ФИО</h4>
+                <input placeholder="Иванов Иван Иванович">
+                <h4>Рост</h4>
+                <input placeholder="186"> 
+                <h4>Вес</h4>
+                <input placeholder="90">
+                <h4>Размер обуви</h4>
+                <input placeholder="42"> 
+                <h4>Уровень катания</h4>
+                <input placeholder="Новичек">
+                <h4>Номер белета</h4>
+                <input placeholder="55"> 
+                <p>
+                </p>
+                <button type="submit">Зарегестрировать</button>
+            </form>
         <div id="registration" class="queue-block active">
             <h2>Регистрация</h2>
             <p>Клиент с номером: <span class="current">-</span></p>
             <p>Следующий: <span class="next">-</span></p>
+            <button class="next-btn">Следующий</button>
         </div>
         <div id="rental" class="queue-block">
             <h2>Прокат</h2>
             <p>Клиент с номером: <span class="current">-</span></p>
             <p>Следующий: <span class="next">-</span></p>
+            <button class="next-btn">Следующий</button>
         </div>
         <div id="payment" class="queue-block">
             <h2>Оплата</h2>
             <p>Клиент с номером : <span class="current">-</span></p>
             <p>Следующий: <span class="next">-</span></p>
+            <button class="next-btn">Следующий</button>
+        </div>
         </div>
     </div>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.6.1/dist/sockjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+
     <script src="app.js"></script>
 </body>
 </html>
