@@ -1,21 +1,20 @@
-/* Обёртка для центрирования */
+/* Обёртка для центрирования вкладок */
 .tabs-wrapper {
-    display: flex;            /* flex-контейнер */
-    justify-content: center;  /* центрируем горизонтально */
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
 /* Сам блок табов с рамкой */
 .tabs {
-    display: flex;            /* чтобы табы шли по горизонтали */
-    gap: 10px;                /* расстояние между табами */
+    display: flex;
+    gap: 10px;
     font-size: larger;
     border-radius: 5pt;
-    border: 2px solid #333;   /* рамка */
-    padding: 10px 20px;       /* внутренние отступы */
+    border: 2px solid #333;
+    padding: 10px 20px;
     background-color: #f9f9f9;
 }
-
 
 .tab {
     cursor: pointer;
@@ -33,19 +32,62 @@
 .queues {
     display: flex;
     justify-content: center;
-    gap: 300px;       /* расстояние между очередями */
+    gap: 300px;
     margin-top: 40px;
-
-
 }
 
 .queue-block {
     display: none;
     text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.40);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-top: 20px;
 }
 
 .queue-block.active {
     display: block;
+}
+
+.manage {
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 10px;
+background-color: #007bff;
+color: white;
+font-weight: bold;
+transition: 0.3s;
+}
+
+
+.manage:hover {
+background-color: #0056b3;
+transform: translateY(-2px);
+}
+
+.header-top {
+display: flex;
+justify-content: flex-end; /* выравнивание справа */
+padding: 10px 20px;
+}
+
+
+/* Кнопка Войти */
+.login-btn {
+text-decoration: none;
+padding: 8px 16px;
+border-radius: 8px;
+background-color: #ff6600;
+color: white;
+font-weight: bold;
+transition: 0.3s;
+}
+
+
+.login-btn:hover {
+background-color: #cc5200;
+transform: translateY(-1px);
 }
 
 h2 {
@@ -56,19 +98,87 @@ h2 {
     font-size: 40pt;
 }
 
+/* Фон всей страницы */
 body {
-    background-image: url("77c5d9a813ccb7317041fcfa67b8f13b.jpg");
+    background-image: url("77c5d9a813ccb7317041fcfa67b8f13b.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
-.registration {
-    display: flex;
-    justify-content: center;
-    gap: 250px;
+/* Универсальные формы */
+.form-block {
+    display: none;
+    background: rgba(255, 255, 255, 0.40);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    max-width: 400px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
 }
 
-.queues {
-    gap : 300px;
+.form-block.active {
+    display: block;
+}
+
+/* Заголовки полей */
+.form-block h4 {
+    margin: 15px 0 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Поля input */
+.form-block input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.form-block input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    outline: none;
+}
+
+/* Кнопки submit и "Следующий" */
+.form-block button, .next-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Отдельные цвета для кнопок */
+.form-block button {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-block button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.next-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.next-btn:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+/* Состояние disabled */
+input:disabled {
+    background-color: #eee;
+    color: #555;
 }
