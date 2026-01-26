@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Очередь</title>
-    <link rel="stylesheet" href="style.css"> 
+<meta charset="UTF-8">
+<title>Очередь</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-            <div class="header-top">
-                <a href="login.html" class="login-btn">Войти</a>
-            </div>
-                <div class="tabs-wrapper">
-                <div id="tabs" class="tabs">
-                    <div class="tab active" data-target="registration">Регистрация</div>
-                    <div class="tab" data-target="rental">Прокат</div>
-                    <div class="tab" data-target="payment">Оплата</div>
-                </div>
-            <a href="operator.html" class="manage">Управление</a>
-            </div>
-    </header>
 
-    <div id="queues" class="queues">
-        <div id="registration" class="queue-block active">
-            <h2>Регистрация</h2>
-            <p>Клиент с номером: <span class="current">-</span></p>
-            <p>Следующий: <span class="next">-</span></p>
-        </div>
-        <div id="rental" class="queue-block">
-            <h2>Прокат</h2>
-            <p>Клиент с номером: <span class="current">-</span></p>
-            <p>Следующий: <span class="next">-</span></p>
-        </div>
-        <div id="payment" class="queue-block">
-            <h2>Оплата</h2>
-            <p>Клиент с номером : <span class="current">-</span></p>
-            <p>Следующий: <span class="next">-</span></p>
-        </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.6.1/dist/sockjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
-    <script src="app.js"></script>
+<header class="header-bar">
+<div id="tabs" class="tabs">
+<div class="tab active" data-target="registration">Регистрация</div>
+<div class="tab" data-target="rental">Прокат</div>
+<div class="tab" data-target="payment">Оплата</div>
+</div>
+
+
+<div class="header-actions">
+<a href="operator.html" class="manage">Управление</a>
+<a href="login.html" class="login-btn">Войти</a>
+</div>
+</header>
+
+
+<main>
+<div class="queues work-area">
+
+
+<div id="registration" class="queue-block active">
+<h1>Регистрация</h1>
+<p>Клиент с номером: <span class="current">-</span></p>
+<p>Следующий: <span class="next">-</span></p>
+</div>
+
+
+<div id="rental" class="queue-block">
+<h1>Прокат</h1>
+<p>Клиент с номером: <span class="current">-</span></p>
+<p>Следующий: <span class="next">-</span></p>
+</div>
+
+
+<div id="payment" class="queue-block">
+<h1>Оплата</h1>
+<p>Клиент с номером: <span class="current">-</span></p>
+<p>Следующий: <span class="next">-</span></p>
+</div>
+
+
+</div>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.6.1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

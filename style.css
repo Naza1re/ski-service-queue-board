@@ -1,26 +1,40 @@
-/* Обёртка для центрирования вкладок */
-.tabs-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("77c5d9a813ccb7317041fcfa67b8f13b.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
-/* Сам блок табов с рамкой */
+/* ===== HEADER ===== */
+.header-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: relative;
+}
+
 .tabs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    font-size: larger;
-    border-radius: 5pt;
-    border: 2px solid #333;
     padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
     background-color: #f9f9f9;
 }
 
 .tab {
-    cursor: pointer;
     padding: 10px 20px;
-    border-radius: 5pt;
+    border-radius: 5px;
     background: #ddd;
+    cursor: pointer;
     transition: background 0.2s;
 }
 
@@ -28,92 +42,54 @@
     background: #aaa;
 }
 
-/* Блоки очереди */
-.queues {
+.header-actions {
+    margin-left: auto;
     display: flex;
-    justify-content: center;
-    gap: 300px;
-    margin-top: 40px;
+    gap: 15px;
 }
 
-.queue-block {
-    display: none;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.40);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    margin-top: 20px;
-}
-
-.queue-block.active {
-    display: block;
+.manage, .login-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
 }
 
 .manage {
-text-decoration: none;
-padding: 10px 20px;
-border-radius: 10px;
-background-color: #007bff;
-color: white;
-font-weight: bold;
-transition: 0.3s;
+    background-color: #007bff;
 }
-
-
 .manage:hover {
-background-color: #0056b3;
-transform: translateY(-2px);
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
-.header-top {
-display: flex;
-justify-content: flex-end; /* выравнивание справа */
-padding: 10px 20px;
-}
-
-
-/* Кнопка Войти */
 .login-btn {
-text-decoration: none;
-padding: 8px 16px;
-border-radius: 8px;
-background-color: #ff6600;
-color: white;
-font-weight: bold;
-transition: 0.3s;
+    background-color: #ff6600;
 }
-
-
 .login-btn:hover {
-background-color: #cc5200;
-transform: translateY(-1px);
+    background-color: #cc5200;
+    transform: translateY(-1px);
 }
 
-h2 {
-    font-size: 50pt;
+/* ===== WORK AREA ===== */
+.work-area {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 1200px;
 }
 
-.queue-block.active > p {
-    font-size: 40pt;
-}
-
-/* Фон всей страницы */
-body {
-    background-image: url("77c5d9a813ccb7317041fcfa67b8f13b.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Универсальные формы */
+/* ===== FORMS ===== */
 .form-block {
     display: none;
-    background: rgba(255, 255, 255, 0.40);
-    padding: 30px 40px;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    max-width: 400px;
-    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 500px;
     transition: all 0.3s ease;
 }
 
@@ -121,21 +97,22 @@ body {
     display: block;
 }
 
-/* Заголовки полей */
+.form-block h3 {
+    margin-top: 0;
+}
+
 .form-block h4 {
     margin: 15px 0 5px;
     font-size: 16px;
-    color: #333;
 }
 
-/* Поля input */
 .form-block input {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
-    transition: 0.2s;
+    margin-bottom: 10px;
 }
 
 .form-block input:focus {
@@ -144,32 +121,56 @@ body {
     outline: none;
 }
 
-/* Кнопки submit и "Следующий" */
-.form-block button, .next-btn {
-    margin-top: 20px;
+.form-block button {
     width: 100%;
     padding: 12px;
     font-size: 18px;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* Отдельные цвета для кнопок */
-.form-block button {
     background-color: #007bff;
     color: white;
+    cursor: pointer;
 }
-
 .form-block button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
 
+/* ===== QUEUES ===== */
+.queues {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+.queue-block {
+    display: none;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.queue-block.active {
+    display: block;
+}
+
+.queue-block h2 {
+    margin-top: 0;
+}
+
+.queue-block p {
+    font-size: 18px;
+}
+
 .next-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
     background-color: #28a745;
     color: white;
+    cursor: pointer;
 }
 
 .next-btn:hover {
@@ -177,8 +178,67 @@ body {
     transform: translateY(-1px);
 }
 
-/* Состояние disabled */
-input:disabled {
-    background-color: #eee;
-    color: #555;
+
+
+
+
+
+
+/* Центрируем и делаем карточки огромными */
+.work-area.queues {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+    min-height: 80vh;
+}
+
+/* Белые полупрозрачные карточки */
+.queue-block {
+    display: none;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    padding: 50px 40px;
+    border-radius: 25px;
+    width: 450px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.queue-block.active {
+    display: block;
+}
+
+.queue-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+.queue-block h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.queue-block p {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.next-btn {
+    padding: 18px 40px;
+    font-size: 22px;
+    border-radius: 15px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    margin-top: 25px;
+}
+
+.next-btn:hover {
+    background-color: #218838;
 }

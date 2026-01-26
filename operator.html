@@ -1,98 +1,117 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Управление</title>
-    <link rel="stylesheet" href="style.css"> 
+<meta charset="UTF-8">
+<title>Управление</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-            <div class="header-top">
-                <a href="login.html" class="login-btn">Войти</a>
-            </div>
-                <div class="tabs-wrapper">
-                <div id="tabs" class="tabs">
-                    <div class="tab active" data-target="registration">Регистрация</div>
-                    <div class="tab" data-target="rental">Прокат</div>
-                    <div class="tab" data-target="rental-item">Оборудование</div>
-                    <div class="tab" data-target="payment">Оплата</div>
-                    <div class="tab" data-target="equipment">Управление оборудованием</div>
-                    <div class="tab" data-target="users">Пользователи</div>
-                </div>
-            <a href="index.html" class="manage">Очереди</a>
-            </div>
-    </header>
-        <main>
-            <div class="form-block registration active">
-                <form id="clientForm">
-                <h3>Регистрация клиента</h3>
-                <h4>ФИО</h4>
-                <input id="fullName">
-                <h4>Рост</h4>
-                <input id="height" type="number">
-                <h4>Вес</h4>
-                <input id="weight" type="number">
-                <h4>Размер обуви</h4>
-                <input id="shoeSize" type="number">
-                <h4>Уровень катания</h4>
-                <input id="skillLevel">
-                <h4>Номер билета</h4>
-                <input id="registrationTicketNumber" type="number" disabled>
-                <button type="submit">Зарегистрировать</button>
-                </form>
-            </div>
-
-            <div class="form-block rental">
-                <form id="rentalOrder">
-                <h3>Создание аренды</h3>
-                <h4>Тип документа</h4>
-                <input id="documentType" type="text">
-                <h4>Данные документа</h4>
-                <input id="documentInformation">
-                <h4>Номер билета</h4>
-                <input id="rentalTicketNumber" type="number" disabled>
-                </form>
-            </div>
-
-            <div class="form-block payment">
-                <form id="paymentSkiPass">
-                <h3>Создание оплаты</h3>
-                <h4>Идентификатор SkiPass</h4>
-                <input id="skiPassId" type="text">
-                <h4>Валиден от</h4>
-                <input id="validFrom" type="datetime-local">
-                <h4>Валиден до</h4>
-                <input id="validTo" type="datetime-local">
-                <h4>Номер билета</h4>
-                <input id="paymentTicketNumber" type="number" disabled>
-                </form>
-            </div>
-            </div>
 
 
-            <div id="registration" class="queue-block active">
-                <h2>Регистрация</h2>
-                <p>Клиент с номером билета: <span class="current">-</span></p>
-                <p>Следующий: <span class="next">-</span></p>
-                <button class="next-btn">Следующий</button>
-            </div>
-            <div id="rental" class="queue-block">
-                <h2>Прокат</h2>
-                <p>Клиент с номером билета: <span class="current">-</span></p>
-                <p>Следующий: <span class="next">-</span></p>
-                <button class="next-btn">Следующий</button>
-            </div>
-                <div id="payment" class="queue-block">
-                <h2>Оплата</h2>
-                <p>Клиент с номером билета: <span class="current">-</span></p>
-                <p>Следующий: <span class="next">-</span></p>
-                <button class="next-btn">Следующий</button>
-            </div>
-            </div>
+<header class="header-bar">
+<div id="tabs" class="tabs">
+<div class="tab active" data-target="registration">Регистрация</div>
+<div class="tab" data-target="rental">Прокат</div>
+<div class="tab" data-target="payment">Оплата</div>
+</div>
+
+
+<div class="header-actions">
+<a href="index.html" class="manage">Очереди</a>
+<a href="login.html" class="login-btn">Войти</a>
+</div>
+</header>
+
+
+<main>
+<div class="work-area">
+
+
+<!-- Формы слева -->
+<div class="forms">
+<div class="form-block registration active">
+<form id="clientForm">
+<h3>Регистрация клиента</h3>
+<h4>ФИО</h4>
+<input id="fullName">
+<h4>Рост</h4>
+<input id="height" type="number">
+<h4>Вес</h4>
+<input id="weight" type="number">
+<h4>Размер обуви</h4>
+<input id="shoeSize" type="number">
+<h4>Уровень катания</h4>
+<input id="skillLevel">
+<h4>Номер билета</h4>
+<input id="registrationTicketNumber" type="number" disabled>
+<button type="submit">Зарегистрировать</button>
+</form>
+</div>
+
+
+<div class="form-block rental">
+<form id="rentalOrder">
+<h3>Создание аренды</h3>
+<h4>Тип документа</h4>
+<input id="documentType" type="text">
+<h4>Данные документа</h4>
+<input id="documentInformation">
+<h4>Номер билета</h4>
+<input id="rentalTicketNumber" type="number" disabled>
+</form>
+</div>
+
+
+<div class="form-block payment">
+<form id="paymentSkiPass">
+<h3>Создание оплаты</h3>
+<h4>Идентификатор SkiPass</h4>
+<input id="skiPassId" type="text">
+<h4>Валиден от</h4>
+<input id="validFrom" type="datetime-local">
+<h4>Валиден до</h4>
+<input id="validTo" type="datetime-local">
+<h4>Номер билета</h4>
+<input id="paymentTicketNumber" type="number" disabled>
+</form>
+</div>
+</div>
+
+
+<!-- Очереди справа -->
+<div class="queues">
+<div id="registration" class="queue-block active">
+<h2>Регистрация</h2>
+<p>Клиент: <span class="current">-</span></p>
+<p>Следующий: <span class="next">-</span></p>
+<button class="next-btn">Следующий</button>
+</div>
+
+
+<div id="rental" class="queue-block">
+<h2>Прокат</h2>
+<p>Клиент: <span class="current">-</span></p>
+<p>Следующий: <span class="next">-</span></p>
+<button class="next-btn">Следующий</button>
+</div>
+
+
+<div id="payment" class="queue-block">
+<h2>Оплата</h2>
+<p>Клиент: <span class="current">-</span></p>
+<p>Следующий: <span class="next">-</span></p>
+<button class="next-btn">Следующий</button>
+</div>
+</div>
+
+
+</div>
 </main>
-    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.6.1/dist/sockjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="app.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.6.1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
